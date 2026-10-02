@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURAT BÜFE MENÜ</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6b1418;
+            --primary-dark: #4a0c0f;
+            --accent-color: #d4af37;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-color: #2c2c2c;
+            --text-muted: #666666;
+            --border-radius: 16px;
+            --shadow: 0 10px 30px rgba(107, 20, 24, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* HEADER & LOGO SECTION */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* CATEGORY FILTER BUTTONS */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(107, 20, 24, 0.3);
+        }
+
+        /* CONTAINER & GRID */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* MENU ITEM CARD */
+        .menu-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(107, 20, 24, 0.15);
+        }
+
+        .card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .card-price {
+            background-color: rgba(107, 20, 24, 0.08);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ÜST BİLGİ VE LOGO -->
+    <header>
+        <div class="logo-container">
+            <!-- SVG Formatında Gömülü Logo (Harici Dosya Gerektirmez) -->
+            <svg viewBox="0 0 500 500" width="100%" height="100%">
+                <circle cx="250" cy="250" r="250" fill="#6B1418"/>
+                <text x="250" y="250" font-family="'Montserrat', sans-serif" font-size="78" font-weight="800" fill="#FDFBF7" text-anchor="middle" letter-spacing="4">MURAT</text>
+                <text x="250" y="310" font-family="'Montserrat', sans-serif" font-size="34" font-weight="600" fill="#FDFBF7" text-anchor="middle" letter-spacing="12">SANDVİÇ</text>
+                <line x1="120" y1="340" x2="175" y2="340" stroke="#FDFBF7" stroke-width="2.5"/>
+                <text x="250" y="346" font-family="'Montserrat', sans-serif" font-size="18" font-weight="500" fill="#FDFBF7" text-anchor="middle" letter-spacing="8">GAZİANTEP</text>
+                <line x1="325" y1="340" x2="380" y2="340" stroke="#FDFBF7" stroke-width="2.5"/>
+            </svg>
+        </div>
+        <h1>MURAT BÜFE MENÜ</h1>
+        <p>GAZİANTEP</p>
+    </header>
+
+    <!-- KATEGORİ FİLTRELERİ -->
+    <div class="categories">
+        <button class="filter-btn active" onclick="filterMenu('all', event)">Tümü</button>
+        <button class="filter-btn" onclick="filterMenu('sandvic', event)">Sandviçler</button>
+        <button class="filter-btn" onclick="filterMenu('kahvalti', event)">Kahvaltı Çeşitleri</button>
+        <button class="filter-btn" onclick="filterMenu('tost', event)">Tostlar</button>
+        <button class="filter-btn" onclick="filterMenu('icecek', event)">İçecekler</button>
+    </div>
+
+    <!-- MENÜ İÇERİĞİ -->
+    <div class="container">
+        <div class="menu-grid" id="menu-grid">
+
+            <!-- SANDVİÇLER -->
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Avokado Labne</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Taze avokado, lezzetli labne ve taptaze yeşillikler ile hazırlanmış sandviç.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Avokado Köy Yumurtalı</h3>
+                        <span class="card-price">170 TL</span>
+                    </div>
+                    <p class="card-desc">Avokado, doğal köy yumurtası ve bol yeşillikli zengin sandviç.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Klasik Labne & Zeytin Ezmeli</h3>
+                        <span class="card-price">120 TL</span>
+                    </div>
+                    <p class="card-desc">Taze labne, siyah zeytin ezmesi ve taze yeşillikler.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Muhammara Sandviç</h3>
+                        <span class="card-price">130 TL</span>
+                    </div>
+                    <p class="card-desc">Nefis muhammara, labne ve taze yeşillikler bir arada.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Girit Ezme Sandviç</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Özel Girit ezmesi, labne ve taze yeşillik.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">İtalyan Sandviç</h3>
+                        <span class="card-price">200 TL</span>
+                    </div>
+                    <p class="card-desc">Kızarmış baget ekmeğinde taze mozarella peyniri, pesto, balsamik sos ve tütsülenmiş dana füme et.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sandvic">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Antep Usulü Zeytin Piyazlı</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Gaziantep usulü özel zeytin piyazı ve bol ceviz içi ile hazırlanan sandviç.</p>
+                </div>
+            </div>
+
+            <!-- KAHVALTI ÇEŞİTLERİ -->
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Köyün Bereketi</h3>
+                        <span class="card-price">140 TL</span>
+                    </div>
+                    <p class="card-desc">Kaynamış köy yumurtası ve kahvaltının en seçkin lezzetleri tek bir tabakta.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Tavada Yumurta</h3>
+                        <span class="card-price">140 TL</span>
+                    </div>
+                    <p class="card-desc">Sıcak ve taze pişirilmiş tavada yumurta, yanında taze yeşillikler ile.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Tavada Sucuklu Yumurta</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Kıvamında pişmiş sucuklar ve yumurta.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Geleneksel Menemen</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Taze domates, biber ve yumurtanın muhteşem uyumuyla hazırlanan sıcak menemen.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Kavurmalı Yumurta</h3>
+                        <span class="card-price">170 TL</span>
+                    </div>
+                    <p class="card-desc">Lezzetli dana kavurma ve tavada yumurta lezzeti.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Nefis Omlet</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Köy Yumurtalı nefis sade omlet.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="kahvalti">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Yaz Kahvaltısı</h3>
+                        <span class="card-price">120 TL</span>
+                    </div>
+                    <p class="card-desc">Ferahlatıcı tatlı kavun, karpuz, taze peynir ve lezzetli zeytin tabağı.</p>
+                </div>
+            </div>
+
+            <!-- TOSTLAR -->
+            <div class="menu-card" data-category="tost">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Dana Sucuklu Karışık Tost</h3>
+                        <span class="card-price">140 TL</span>
+                    </div>
+                    <p class="card-desc">Kaliteli dana sucuk ve bol kaşar peynirli harika lezzet.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="tost">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Yumurta Kaşar Tost</h3>
+                        <span class="card-price">140 TL</span>
+                    </div>
+                    <p class="card-desc">Çırpılmış yumurta ve uzayan kaşar peynirli sıcak tost.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="tost">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Atom Tost</h3>
+                        <span class="card-price">150 TL</span>
+                    </div>
+                    <p class="card-desc">Dana sucuk, kaşar peyniri ve yumurtalı doyurucu lezzet.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="tost">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Özel Ayvalık Tostu</h3>
+                        <span class="card-price">160 TL</span>
+                    </div>
+                    <p class="card-desc">Özel Ayvalık tost ekmeğinde dana sucuk, bol kaşar peyniri, pişmiş yeşil biber ve domates.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="tost">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Kavurmalı Tost</h3>
+                        <span class="card-price">170 TL</span>
+                    </div>
+                    <p class="card-desc">Özel kavurma eti ve erimiş kaşar peynirinin muhteşem birleşimi.</p>
+                </div>
+            </div>
+
+            <!-- İÇECEKLER -->
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Coca-Cola (2.5 Litre)</h3>
+                        <span class="card-price">100 TL</span>
+                    </div>
+                    <p class="card-desc">Serinletici 2.5 L Coca-Cola.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Coca-Cola (1 Litre)</h3>
+                        <span class="card-price">80 TL</span>
+                    </div>
+                    <p class="card-desc">Serinletici 1 L Coca-Cola.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Kutu Coca-Cola (330 ml)</h3>
+                        <span class="card-price">60 TL</span>
+                    </div>
+                    <p class="card-desc">Soğuk 330 ml kutu Coca-Cola.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Cam Şişe Coca-Cola</h3>
+                        <span class="card-price">40 TL</span>
+                    </div>
+                    <p class="card-desc"> soğuk cam şişe Coca-Cola.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Soğuk Çay (330 ml)</h3>
+                        <span class="card-price">60 TL</span>
+                    </div>
+                    <p class="card-desc">Ferahlatıcı 330 ml soğuk çay.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Soğuk Çay (1 Litre)</h3>
+                        <span class="card-price">80 TL</span>
+                    </div>
+                    <p class="card-desc">Ferahlatıcı 1 L soğuk çay.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Cam Şişe Gazoz</h3>
+                        <span class="card-price">40 TL</span>
+                    </div>
+                    <p class="card-desc">Nostaljik lezzet, soğuk cam şişe gazoz.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Küçük Çöplü Meyve Suyu</h3>
+                        <span class="card-price">25 TL</span>
+                    </div>
+                    <p class="card-desc">Çocukların ve meyve suyu severlerin tercihi pratik kutu meyve suyu.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Ayran</h3>
+                        <span class="card-price">30 TL</span>
+                    </div>
+                    <p class="card-desc">Geleneksel ve ferahlatıcı soğuk ayran.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Ayran (1 Litre)</h3>
+                        <span class="card-price">70 TL</span>
+                    </div>
+                    <p class="card-desc">Doyurucu ve doğal 1 Litre şişe ayran.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="icecek">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Süt (1 Litre)</h3>
+                        <span class="card-price">70 TL</span>
+                    </div>
+                    <p class="card-desc">Taze ve besleyici 1 Litre süt.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Murat Büfe Sandviç Gaziantep. Tüm Hakları Saklıdır. Created by HKN Bilişim</p>
+    </footer>
+
+    <!-- KATEGORİ FİLTRELEME SCRIPT'İ -->
+    <script>
+        function filterMenu(category, e) {
+            const cards = document.querySelectorAll('.menu-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            e.currentTarget.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
