@@ -35,6 +35,14 @@
     "videos": [
       "videos/muhammarali.mp4"
     ]
+     {
+    "category": "tost",
+    "name": "Albay Tostu",
+    "price": "200 TL",
+    "description": "Taptaze pide ekmeği arasında eriyen bol kaşar peyniri ve leziz dana sucuğu, klasik ketçap-mayonez ikilisiyle buluşuyor.",
+    "video": "videos/muhammarali.mp4",
+    "videos": ""
+    ]
   },
   {
     "category": "sandvic",
@@ -53,7 +61,6 @@
     "description": "Kızarmış baget, mozzarella, pesto, balsamik sos, dana füme ve hindi füme.",
     "video": "videos/avokadolu-fume.mp4",
     "videos": [
-      "videos/avokadolu-fume.mp4",
       "videos/balzamik-soslu.mp4"
     ]
   },
