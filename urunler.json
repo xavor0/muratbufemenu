@@ -62,7 +62,21 @@
     "videos": [
       "videos/balzamik-soslu.mp4"
     ]
+   },
+   {  
+    "category": "tost",
+    "name": "Sebzeli Kaşarlı",
+    "price": "140 TL",
+    "description": "Taptaze ekmek arasında eriyen bol kaşar peyniri ve mevsim sebzelerinin renkli uyumu.",
+    "video": ""
   },
+  {  
+    "category": "tost",
+    "name": "Sebzeli Karışık",
+    "price": "170 TL",
+    "description": "Çıtır ekmek arasında eriyen bol kaşar peyniri, leziz dana sucuğu ve taze sebzelerin ketçap-mayonezle buluştuğu nefis bir lezzet.",
+    "video": ""
+  },  
   {
     "category": "sandvic",
     "name": "Antep Usulü Zeytin Piyazlı",
