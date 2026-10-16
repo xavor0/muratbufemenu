@@ -4,14 +4,20 @@
     "name": "Avokado Labne",
     "price": "150 TL",
     "description": "Taze avokado, lezzetli labne ve taptaze yeşillikler ile hazırlanmış sandviç.",
-    "video": ""
+    "video": "videos/avokado-labne.mp4",
+    "videos": [
+      "videos/avokado-labne.mp4"
+    ]
   },
   {
     "category": "sandvic",
     "name": "Avokado Köy Yumurtalı",
     "price": "170 TL",
     "description": "Avokado, doğal köy yumurtası ve bol yeşillikli zengin sandviç.",
-    "video": ""
+    "video": "videos/avokado-koy-yumurtali.mp4",
+    "videos": [
+      "videos/avokado-koy-yumurtali.mp4"
+    ]
   },
   {
     "category": "sandvic",
@@ -25,21 +31,31 @@
     "name": "Muhammaralı Sandviç",
     "price": "130 TL",
     "description": "Nefis muhammara, labne vetaze yeşillikler bir arada.",
-    "video": ""
+    "video": "videos/muhammarali.mp4",
+    "videos": [
+      "videos/muhammarali.mp4"
+    ]
   },
   {
     "category": "sandvic",
     "name": "Ege Esintisi Sandviç",
     "price": "150 TL",
     "description": "Özel Girit ezmesi, labne ve taze yeşillik.",
-    "video": ""
+    "video": "videos/girit-ezme.mp4",
+    "videos": [
+      "videos/girit-ezme.mp4"
+    ]
   },
   {
     "category": "sandvic",
     "name": "İtalyan Sandviç",
     "price": "200 TL",
     "description": "Kızarmış baget, mozzarella, pesto, balsamik sos, dana füme ve hindi füme.",
-    "video": ""
+    "video": "videos/avokadolu-fume.mp4",
+    "videos": [
+      "videos/avokadolu-fume.mp4",
+      "videos/balzamik-soslu.mp4"
+    ]
   },
   {
     "category": "sandvic",
@@ -123,7 +139,10 @@
     "name": "Özel Ayvalık Tostu",
     "price": "160 TL",
     "description": "Dana sucuk, bol kaşar, pişmiş yeşil biber ve domates.",
-    "video": ""
+    "video": "videos/ayvalik-tostu.mp4",
+    "videos": [
+      "videos/ayvalik-tostu.mp4"
+    ]
   },
   {
     "category": "tost",
