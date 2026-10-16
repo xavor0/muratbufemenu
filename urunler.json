@@ -1,0 +1,212 @@
+[
+  {
+    "category": "sandvic",
+    "name": "Avokado Labne",
+    "price": "150 TL",
+    "description": "Taze avokado, lezzetli labne ve taptaze yeşillikler ile hazırlanmış sandviç.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "Avokado Köy Yumurtalı",
+    "price": "170 TL",
+    "description": "Avokado, doğal köy yumurtası ve bol yeşillikli zengin sandviç.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "Klasik Labne & Zeytin Ezmeli",
+    "price": "120 TL",
+    "description": "Taze labne, siyah zeytin ezmesi ve taze yeşillikler.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "Muhammaralı Sandviç",
+    "price": "130 TL",
+    "description": "Nefis muhammara, labne vetaze yeşillikler bir arada.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "Ege Esintisi Sandviç",
+    "price": "150 TL",
+    "description": "Özel Girit ezmesi, labne ve taze yeşillik.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "İtalyan Sandviç",
+    "price": "200 TL",
+    "description": "Kızarmış baget, mozzarella, pesto, balsamik sos, dana füme ve hindi füme.",
+    "video": ""
+  },
+  {
+    "category": "sandvic",
+    "name": "Antep Usulü Zeytin Piyazlı",
+    "price": "150 TL",
+    "description": "Gaziantep usulü özel zeytin piyazı ve bol ceviz içi ile hazırlanan sandviç.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Köyün Bereketi",
+    "price": "140 TL",
+    "description": "Kaynamış köy yumurtası ve kahvaltının en seçkin lezzetleri tek tabakta.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Tavada Yumurta",
+    "price": "140 TL",
+    "description": "Sıcak ve taze pişirilmiş tavada yumurta, yanında taze yeşillikler ile.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Tavada Sucuklu Yumurta",
+    "price": "150 TL",
+    "description": "Kıvamında pişmiş sucuklar ve yumurta.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Geleneksel Menemen",
+    "price": "150 TL",
+    "description": "Taze domates, biber ve yumurtanın muhteşem uyumuyla hazırlanan sıcak menemen.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Kavurmalı Yumurta",
+    "price": "170 TL",
+    "description": "Lezzetli dana kavurma ve tavada yumurta lezzeti.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Nefis Omlet",
+    "price": "150 TL",
+    "description": "Köy yumurtalı nefis sade omlet.",
+    "video": ""
+  },
+  {
+    "category": "kahvalti",
+    "name": "Yaz Kahvaltısı",
+    "price": "120 TL",
+    "description": "Kavun, karpuz, taze peynir ve lezzetli zeytin tabağı.",
+    "video": ""
+  },
+  {
+    "category": "tost",
+    "name": "Dana Sucuklu Karışık Tost",
+    "price": "140 TL",
+    "description": "Kaliteli dana sucuk ve bol kaşar peynirli harika lezzet.",
+    "video": ""
+  },
+  {
+    "category": "tost",
+    "name": "Yumurta Kaşar Tost",
+    "price": "140 TL",
+    "description": "Çırpılmış yumurta ve uzayan kaşar peynirli sıcak tost.",
+    "video": ""
+  },
+  {
+    "category": "tost",
+    "name": "Atom Tost",
+    "price": "150 TL",
+    "description": "Dana sucuk, kaşar peyniri ve yumurtalı doyurucu lezzet.",
+    "video": ""
+  },
+  {
+    "category": "tost",
+    "name": "Özel Ayvalık Tostu",
+    "price": "160 TL",
+    "description": "Dana sucuk, bol kaşar, pişmiş yeşil biber ve domates.",
+    "video": ""
+  },
+  {
+    "category": "tost",
+    "name": "Kavurmalı Tost",
+    "price": "170 TL",
+    "description": "Özel kavurma eti ve erimiş kaşar peynirinin birleşimi.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Coca-Cola (2.5 Litre)",
+    "price": "100 TL",
+    "description": "Serinletici 2.5 L Coca-Cola.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Coca-Cola (1 Litre)",
+    "price": "80 TL",
+    "description": "Serinletici 1 L Coca-Cola.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Kutu Coca-Cola (330 ml)",
+    "price": "60 TL",
+    "description": "Soğuk 330 ml kutu Coca-Cola.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Cam Şişe Coca-Cola",
+    "price": "40 TL",
+    "description": "Soğuk cam şişe Coca-Cola.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Soğuk Çay (330 ml)",
+    "price": "60 TL",
+    "description": "Ferahlatıcı 330 ml soğuk çay.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Soğuk Çay (1 Litre)",
+    "price": "80 TL",
+    "description": "Ferahlatıcı 1 L soğuk çay.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Cam Şişe Gazoz",
+    "price": "40 TL",
+    "description": "Nostaljik lezzet, soğuk cam şişe gazoz.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Küçük Çöplü Meyve Suyu",
+    "price": "25 TL",
+    "description": "Pratik kutu meyve suyu.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Ayran",
+    "price": "30 TL",
+    "description": "Geleneksel ve ferahlatıcı soğuk ayran.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Ayran (1 Litre)",
+    "price": "70 TL",
+    "description": "Doyurucu 1 litre şişe ayran.",
+    "video": ""
+  },
+  {
+    "category": "icecek",
+    "name": "Süt (1 Litre)",
+    "price": "70 TL",
+    "description": "Taze ve besleyici 1 litre süt.",
+    "video": ""
+  }
+]
