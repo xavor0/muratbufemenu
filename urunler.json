@@ -26,6 +26,20 @@
     "description": "Taze labne, siyah zeytin ezmesi ve taze yeşillikler.",
     "video": ""
   },
+   {
+    "category": "sandvic",
+    "name": "Peynir Dünyası Sandviç",
+    "price": "150 TL",
+    "description": "Eski kaşar ,otlu peynir ,labne ,zeytin ezmesi ,taze yeşillikler.",
+    "video": ""
+  },
+   {
+    "category": "sandvic",
+    "name": "Köy Yumurtalı Sandviç",
+    "price": "150 TL", 
+    "description": "Kaynamış köy yumurtası ,labne ,zeytin ezmesi ,taze yeşillikler.",
+    "video": ""
+  },
   {
     "category": "sandvic",
     "name": "Muhammaralı Sandviç",
@@ -87,7 +101,7 @@
   {
     "category": "kahvalti",
     "name": "Köyün Bereketi",
-    "price": "140 TL",
+    "price": "150 TL",
     "description": "Kaynamış köy yumurtası ve kahvaltının en seçkin lezzetleri tek tabakta.",
     "video": ""
   },
@@ -171,11 +185,32 @@
     "description": "Özel kavurma eti ve erimiş kaşar peynirinin birleşimi.",
     "video": ""
   },
+   {
+    "category": "tost",
+    "name": "Albay Tostu",
+    "price": "200 TL",
+    "description": "Pide ekmeğinde dana sucuk ve kaşarın mükkemmel birleşimi.",
+    "video": ""
+  },
   {
     "category": "icecek",
     "name": "Coca-Cola (2.5 Litre)",
     "price": "100 TL",
     "description": "Serinletici 2.5 L Coca-Cola.",
+    "video": ""
+  },
+   {
+    "category": "tost",
+    "name": "Sebzeli Albay Tostu",
+    "price": "250 TL",
+    "description": "Pide ekmeğinde daana sucuk ,kaşar ,yeşil biber ,domates.",
+    "video": ""
+  },
+   {
+    "category": "tost",
+    "name": "Murat Spesiyal Tost",
+    "price": "250 TL",
+    "description": "Dana sucuk ,kızarmış hellim peyniri ,kavrulmuş yumurta ,tütsülenmiş dana antrikot.",
     "video": ""
   },
   {
